@@ -1,0 +1,14 @@
+{
+  "name": "api-ai-javascript-master",
+  "version": "1.0.0",
+  "description": "JavaScript SDK for Api.ai ===================================== api.ai.js makes it easy to integrate [Api.ai](https://api.ai) natural language processing service into your web application.",
+  "main": "site.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
