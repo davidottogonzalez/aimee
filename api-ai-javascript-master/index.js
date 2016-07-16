@@ -10,7 +10,16 @@ app.get('/', function (req, res) {
   res.sendFile(__dirname + "/demo/index.html" );
 });
 
-app.use(express.static(path.join(__dirname, '/demo/js')));
+app.get('/index2', function (req, res) {
+  res.sendFile(__dirname + "/demo/index2.html" );
+});
+
+app.get('/index3', function (req, res) {
+  res.sendFile(__dirname + "/demo/index3.html" );
+});
+
+
+app.use(express.static(path.join(__dirname, '/demo')));
 
 app.listen(3000, function () {
 

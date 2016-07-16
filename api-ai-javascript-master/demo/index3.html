@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mr.Robot</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href="http://vjs.zencdn.net/5.8.8/video-js.css" rel="stylesheet">
+</head>
+<body>
+  <div>
+    <img src="/img/mrrobot1.png" alt="" />
+  </div>
+  <div>
+    <video id="my-video" class="video-js" controls preload="auto" width="558" height="300"
+    poster="http://video-js.zencoder.com/oceans-clip.jpg" data-setup="{}">
+      <source src="https://d3soezdrjjkk7w.cloudfront.net/WatchWith_Development_Account/978/870/MrRobot_09_eps1.8_m1rr0r1ng.qt_720p.mp4" type='video/mp4'>
+    </video>
+  </div>
+  <div>
+      <img src="/img/mrrobot2.png" alt="" />
+  </div>
+  <script src="http://vjs.zencdn.net/5.8.8/video.js"></script>
+  <script>
+    var player = videojs('my-video');
+    player.currentTime(53);
+    player.play();
+  </script>
+</body>
+</html>
