@@ -3,7 +3,7 @@ var app = express();
 var path = require('path');
 
 app.get('/', function (req, res) {
-  res.sendFile(  "/Users/Samuel/Downloads/api-ai-javascript-master/demo/" + "index.html" );
+  res.sendFile(__dirname + "/demo/index.html" );
 });
 
 app.use(express.static(path.join(__dirname, '/demo/js')));
