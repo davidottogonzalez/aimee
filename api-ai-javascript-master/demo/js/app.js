@@ -117,6 +117,7 @@ function App() {
              * You can send json through websocet.
              * For example to initialise dialog if you have appropriate intent.
              */
+             /*
             apiAi.sendJson({
                 "v": "20150512",
                 "query": "hello",
@@ -125,6 +126,7 @@ function App() {
                 //"contexts" : ["weather", "local"],
                 "sessionId": sessionId
             });
+*/
 
         };
 
