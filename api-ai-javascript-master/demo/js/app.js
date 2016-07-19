@@ -157,6 +157,30 @@ function App() {
             dialogue.innerHTML += ('user : ' + data.result.resolvedQuery + '\napi  : ' + speech + '\n\n');
             response.innerHTML = JSON.stringify(data, null, 2);
             text.innerHTML = '';// clean input
+
+            player = videojs("my-video");
+            console.log(speech);
+            switch(speech){
+              case 'Playing Mr. Robot Season 1, Episode 9.':
+                player.currentTime(90);
+                player.play();
+                break;
+              case 'OK, I\'ve put it on your Comcast Card':
+                setTimeout(function(){
+                  player = videojs("my-video");
+                  console.log('hiiiii!!!!');
+                  player.pause();
+                  player.currentTime(370);
+
+                  var audio = new Audio('/js/commercial.wav');
+                  audio.play();
+                }, 6000);
+                  break;
+              case 'Let\'s look at the latest Shevy. It is less expensive than the Lexus.':
+                player = videojs("my-video");
+                player.play();
+                break;
+            }
         };
 
         apiAi.onError = function (code, data) {

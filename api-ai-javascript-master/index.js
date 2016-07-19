@@ -7,15 +7,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get('/', function (req, res) {
-<<<<<<< HEAD
-  res.sendFile(  __dirname + "/demo/" + "index.html" );
-=======
   res.sendFile(__dirname + "/demo/index.html" );
 });
 
 app.get('/index2', function (req, res) {
   res.sendFile(__dirname + "/demo/index2.html" );
->>>>>>> origin/master
 });
 
 app.get('/index3', function (req, res) {

@@ -4,15 +4,45 @@
     <title>Mr.Robot</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link href="http://vjs.zencdn.net/5.8.8/video-js.css" rel="stylesheet">
+    <!-- <link href="/css/bootstrap.css" rel="stylesheet"> -->
+
+
 </head>
 <body>
   <div>
     <img src="/img/mrrobot1.png" alt="" />
   </div>
+
   <div>
+    <span id="server" class="hidden"></span>
+    <br/>
+    <span id="token" class="hidden"></span>
+    <br/>
+
+    <button type="button" onclick="app.open()" class="hidden">Open WebSocket</button>
+    <button type="button" onclick="app.close()" class="hidden">Close WebSocket</button>
+
+    <br/><br/>
+
+    <button id="start" type="button" onclick="app.start()" class="ghastly" >
+      <img src="/img/microphone.png" class="biggie">
+    </button>
+    <button id="stop" type="button" onclick="app.stop()" class="hidden ghastly">
+      <img src="/img/microphone.png" class="biggie2">
+    </button>
+    <input id="text" class="hidden" type="text"/>
+    <button type="button" onclick="app.sendJson()" class="hidden">Send JSON</button>
+
+    <br/><br/>
+
+    <button id="clean" type="button" onclick="app.clean()" class="hidden">Clean dialogue</button>
+    <div style="display: flex">
+        <div id="dialogue" class="half-panel hidden" style="white-space: pre-line;width: 50%"></div>
+        <div id="response" class="half-panel hidden" style="white-space: pre;width: 50%;"></div>
+    </div>
     <video id="my-video" class="video-js" controls preload="auto" width="558" height="300"
     poster="http://video-js.zencoder.com/oceans-clip.jpg" data-setup="{}">
-      <source src="https://d3soezdrjjkk7w.cloudfront.net/WatchWith_Development_Account/978/870/MrRobot_09_eps1.8_m1rr0r1ng.qt_720p.mp4" type='video/mp4'>
+      <source src="/img/MrRobot_Compressed.mov" type='video/mp4'>
     </video>
   </div>
   <div>
@@ -21,8 +51,21 @@
   <script src="http://vjs.zencdn.net/5.8.8/video.js"></script>
   <script>
     var player = videojs('my-video');
-    player.currentTime(53);
-    player.play();
+    // player.currentTime(53);
+    // player.play();
+
+  </script>
+  <script type="text/javascript" src="/js/resampler.js"></script>
+  <script type="text/javascript" src="/js/recorderWorker.js"></script>
+  <script type="text/javascript" src="/js/recorder.js"></script>
+  <script type="text/javascript" src="/js/vad.js"></script>
+  <script type="text/javascript" src="/js/processors.js"></script>
+  <script type="text/javascript" src="/js/tts.js"></script>
+  <script type="text/javascript" src="/js/api.ai.js"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+  <script type="text/javascript">
+  var audio = new Audio('/js/broughttoyou.wav');
+  audio.play();
   </script>
 </body>
 </html>

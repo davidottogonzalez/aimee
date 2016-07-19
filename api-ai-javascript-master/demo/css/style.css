@@ -1,3 +1,22 @@
 html {
   background-color: #111111;
 }
+
+.hidden {
+  display: none;
+}
+
+.ghastly {
+  background-color:#111111;
+  border:none;
+  outline:none;
+}
+
+.biggie{
+  width: 30px!important;
+}
+
+.biggie2{
+  width: 30px!important;
+  opacity:0.22;
+}
